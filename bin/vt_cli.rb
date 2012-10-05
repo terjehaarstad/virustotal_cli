@@ -24,7 +24,7 @@ class VT_cli
 		@cmd = {}
 		
 		# Option Parser
-		opts = OptionParser.new do |opts|
+		OptionParser.new do |opts|
 			opts.banner = "Usage: #{$0} [OPTIONS] COMMAND RESOURCE"
 			
 			#Options
