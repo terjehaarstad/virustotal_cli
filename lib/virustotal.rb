@@ -35,7 +35,7 @@ class VirusTotal
 					break
 				else
 					puts "[*] Fetching file report for #{hashes[i].slice(0)} (#{i+1}/#{hashes.size})"
-					hashes[i] << MyTools::VirusTotal.new.get_file_report(hashes[i].slice(0))
+					hashes[i] << VirusTotal.new.get_file_report(hashes[i].slice(0))
 				end
 			end
 			i += 1

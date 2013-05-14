@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
 	 s.description = "Handles virustotal API requests from linux terminal."
 	 s.required_ruby_version = ">= 1.9.2"
 	 s.author = 'Terje Haarstad'
+	 s.has_rdoc = true
 	# Files
 	 s.files = Dir['lib/*.rb'] + Dir['bin/*']
 	 s.executables << 'vt_cli.rb'
