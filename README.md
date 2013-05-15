@@ -7,5 +7,6 @@ A commandline interface written for linux to search for known
 install libsqlite3-dev (debian based distro)
 
 ## Installation
-Change @api_key in bin/vt_cli.rb to your virustotal api key
- and gem build virustotal.gemspec.
+1. Install virustotal gem: gem install virustotal-*.gem
+2. Paste your API key into vt_cli's config file (~/.virustotal.conf)
+

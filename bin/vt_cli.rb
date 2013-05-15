@@ -1,15 +1,26 @@
 #!/usr/bin/env ruby
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '/../lib'))
 require 'optparse'
 require 'virustotal'
+
 
 #
 # Virustotal reports from CLI
 #
 
-class VT_cli
+class VT_CLI
 	def initialize(userOpt)
 		@debug = false
 		@api_key = 'your key here'
+		@config = File.join(Dir.home, ".virustotal.conf")
+		
+		if not File.exists?(@config)
+			puts "[!!] Config file #{@config} is not found!"
+		end
+		File.open(@config, "r") do |file|
+			@api_key = file.gets.chomp
+		end
+		
 		
 		# Arguments check
 		if userOpt == nil
@@ -83,4 +94,4 @@ class VT_cli
 	end
 end
 
-VT_cli.new(ARGV[0])
+VT_CLI.new(ARGV[0])
