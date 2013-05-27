@@ -484,7 +484,7 @@ Did we get any results on the VT request?
 65:                                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Detection Ratio: #{@positives}/#{@total}&quot;</span>
 66:                                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Scan date: #{@scan_date}&quot;</span>
 67:                                 <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;[+]-------------------------------------------------------------------------&quot;</span> 
-68:                                 <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@verbose</span> 
+68:                                 <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$verbose</span> 
 69:                                         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;[*] Report:&quot;</span>
 70:                                         <span class="ruby-ivar">@scans</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
 71:                                                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot; [R] #{key}: #{value['result']}&quot;</span>

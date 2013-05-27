@@ -278,9 +278,9 @@
 59:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>
 60:                         <span class="ruby-comment cmt"># Create VirusTotal object</span>
 61:                         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:verbose</span>]
-62:                                 <span class="ruby-ivar">@vt</span> = <span class="ruby-constant">VirusTotalAPI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@api_key</span>, <span class="ruby-ivar">@verbose</span> = <span class="ruby-keyword kw">true</span>)
+62:                                 <span class="ruby-ivar">@vt</span> = <span class="ruby-constant">VirusTotalAPI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@verbose</span> = <span class="ruby-keyword kw">true</span>)
 63:                         <span class="ruby-keyword kw">else</span>
-64:                                 <span class="ruby-ivar">@vt</span> = <span class="ruby-constant">VirusTotalAPI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@api_key</span>)
+64:                                 <span class="ruby-ivar">@vt</span> = <span class="ruby-constant">VirusTotalAPI</span>.<span class="ruby-identifier">new</span>
 65:                         <span class="ruby-keyword kw">end</span>
 66: 
 67:                         <span class="ruby-comment cmt"># Commands</span>

@@ -23,7 +23,7 @@ module VirusTotal
 				puts "[!!] API KEY ERROR!!"
 				exit
 			end
-			@verbose = verbose
+			$verbose = verbose
 		end
 		# Retrieve file-report  based on hashes (IE md5sum) from virustotal.com 
 		def getFileReport(hash)

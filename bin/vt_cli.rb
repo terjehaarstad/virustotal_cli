@@ -59,9 +59,9 @@ module VirusTotal
 		def run
 			# Create VirusTotal object
 			if @options[:verbose]
-				@vt = VirusTotalAPI.new(@api_key, @verbose = true)
+				@vt = VirusTotalAPI.new(@verbose = true)
 			else
-				@vt = VirusTotalAPI.new(@api_key)
+				@vt = VirusTotalAPI.new
 			end
 
 			# Commands

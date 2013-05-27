@@ -65,7 +65,7 @@ module VirusTotal
 				puts "[*] Detection Ratio: #{@positives}/#{@total}"
 				puts "[*] Scan date: #{@scan_date}"
 				puts "[+]-------------------------------------------------------------------------"	
-				if @verbose	
+				if $verbose	
 					puts "[*] Report:"
 					@scans.each do |key, value|
 						puts " [R] #{key}: #{value['result']}"
