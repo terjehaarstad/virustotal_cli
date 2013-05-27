@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: VirusTotal::VT_CLI</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../bin/vt_cli_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="bin/vt_cli.rb">bin/vt_cli.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-parseOpt">#parseOpt</a></li>
+					
+					<li><a href="#method-i-run">#run</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../VirusTotal.html">VirusTotal</a></li>
+				
+					<li><a href="../VirusTotal/Report.html">VirusTotal::Report</a></li>
+				
+					<li><a href="../VirusTotal/ScanResponse.html">VirusTotal::ScanResponse</a></li>
+				
+					<li><a href="../VirusTotal/VT_CLI.html">VirusTotal::VT_CLI</a></li>
+				
+					<li><a href="../VirusTotal/VirusTotalAPI.html">VirusTotal::VirusTotalAPI</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">VirusTotal::VT_CLI</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(userOpt)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File bin/vt_cli.rb, line 12</span>
+12:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">userOpt</span>)
+13:                         <span class="ruby-ivar">@debug</span> = <span class="ruby-keyword kw">false</span>
+14:                 
+15:                         <span class="ruby-comment cmt"># Arguments check</span>
+16:                         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">userOpt</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+17:                                 <span class="ruby-identifier">puts</span> <span class="ruby-identifier">parseOpt</span>(<span class="ruby-value str">&quot;--help&quot;</span>)
+18:                         <span class="ruby-keyword kw">elsif</span>
+19:                                 <span class="ruby-identifier">parseOpt</span>(<span class="ruby-identifier">userOpt</span>)
+20:                                 <span class="ruby-identifier">run</span>
+21:                         <span class="ruby-keyword kw">end</span>
+22:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="parse-pt-method" class="method-detail ">
+				<a name="method-i-parseOpt"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parseOpt</span><span
+						class="method-args">(option)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-pt-source">
+<pre>
+    <span class="ruby-comment cmt"># File bin/vt_cli.rb, line 23</span>
+23:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parseOpt</span>(<span class="ruby-identifier">option</span>)
+24:                         <span class="ruby-ivar">@options</span> = {}
+25:                         <span class="ruby-ivar">@cmd</span> = {}
+26:                         
+27:                         <span class="ruby-comment cmt"># Option Parser</span>
+28:                         <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opts</span><span class="ruby-operator">|</span>
+29:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-node">&quot;Usage: #{$0} [OPTIONS] COMMAND RESOURCE&quot;</span>
+30:                                 
+31:                                 <span class="ruby-comment cmt">#Options</span>
+32:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-value str">&quot;Options:&quot;</span>
+33:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-h'</span>, <span class="ruby-value str">'--help'</span>, <span class="ruby-value str">&quot;This screen&quot;</span>) {<span class="ruby-identifier">puts</span> <span class="ruby-identifier">opts</span>}
+34:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-v'</span>, <span class="ruby-value str">'--verbose'</span>, <span class="ruby-value str">&quot;Show complete report&quot;</span>) {<span class="ruby-ivar">@options</span>[<span class="ruby-value">:verbose</span>] = <span class="ruby-keyword kw">true</span>}
+35:                                 
+36:                                 <span class="ruby-comment cmt"># !! Doesnt work.</span>
+37:                                 <span class="ruby-comment cmt">#opts.on('-w', '--write', &quot;Writes report to 'hash-filename.vt'&quot;)  {options[:write] = true}</span>
+38:                                 
+39:                                 <span class="ruby-comment cmt">#Commands</span>
+40:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">separator</span> <span class="ruby-value str">&quot;Commands:&quot;</span>
+41:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--scanfile [FILE]'</span>, <span class="ruby-value str">'Uploads a file to VT'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+42:                                         <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:scanfile</span>] = <span class="ruby-identifier">file</span>
+43:                                 <span class="ruby-keyword kw">end</span>
+44:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--scanurl [URL]'</span>, <span class="ruby-value str">&quot;Check url with VT&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+45:                                         <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:scanurl</span>] = <span class="ruby-identifier">url</span>
+46:                                 <span class="ruby-keyword kw">end</span>
+47:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--hash [HASH]'</span>, <span class="ruby-value str">&quot;Get Virustotal report from a hash(MD5/SHA)&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+48:                                         <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:hash</span>] = <span class="ruby-identifier">hash</span>
+49:                                 <span class="ruby-keyword kw">end</span>
+50:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--file [FILE]'</span>, <span class="ruby-value str">&quot;Get Virustotal report from a file&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+51:                                         <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:file</span>] = <span class="ruby-identifier">file</span>
+52:                                 <span class="ruby-keyword kw">end</span>
+53:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--url [URL]'</span>, <span class="ruby-value str">&quot;Get Virustotal report from URL&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+54:                                         <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:url</span>] = <span class="ruby-identifier">url</span>
+55:                                 <span class="ruby-keyword kw">end</span>
+56:                                 <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">parse!</span>
+57:                         <span class="ruby-keyword kw">end</span>
+58:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-method" class="method-detail ">
+				<a name="method-i-run"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run-source">
+<pre>
+    <span class="ruby-comment cmt"># File bin/vt_cli.rb, line 59</span>
+59:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>
+60:                         <span class="ruby-comment cmt"># Create VirusTotal object</span>
+61:                         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:verbose</span>]
+62:                                 <span class="ruby-ivar">@vt</span> = <span class="ruby-constant">VirusTotalAPI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@api_key</span>, <span class="ruby-ivar">@verbose</span> = <span class="ruby-keyword kw">true</span>)
+63:                         <span class="ruby-keyword kw">else</span>
+64:                                 <span class="ruby-ivar">@vt</span> = <span class="ruby-constant">VirusTotalAPI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@api_key</span>)
+65:                         <span class="ruby-keyword kw">end</span>
+66: 
+67:                         <span class="ruby-comment cmt"># Commands</span>
+68:                         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:hash</span>]
+69:                                 <span class="ruby-ivar">@res</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@vt</span>.<span class="ruby-identifier">getFileReport</span>(<span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:hash</span>]))
+70:                                 <span class="ruby-ivar">@res</span>.<span class="ruby-identifier">write2display</span>
+71:                         <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:file</span>]
+72:                                 <span class="ruby-ivar">@res</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@vt</span>.<span class="ruby-identifier">getFileReport</span>(<span class="ruby-ivar">@vt</span>.<span class="ruby-identifier">getMd5Sum</span>(<span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:file</span>])))
+73:                                 <span class="ruby-ivar">@res</span>.<span class="ruby-identifier">write2display</span>
+74:                         <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:url</span>]
+75:                                 <span class="ruby-ivar">@res</span> = <span class="ruby-constant">Report</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@vt</span>.<span class="ruby-identifier">getUrlReport</span>(<span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:url</span>]))
+76:                                 <span class="ruby-ivar">@res</span>.<span class="ruby-identifier">write2display</span>
+77:                         <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:scanfile</span>]
+78:                                 <span class="ruby-ivar">@res</span> = <span class="ruby-constant">ScanResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@vt</span>.<span class="ruby-identifier">scanFile</span>(<span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:scanfile</span>]))
+79:                                 <span class="ruby-ivar">@res</span>.<span class="ruby-identifier">write2display</span>
+80:                         <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:scanurl</span>]
+81:                                 <span class="ruby-ivar">@res</span> = <span class="ruby-constant">ScanResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@vt</span>.<span class="ruby-identifier">scanUrl</span>(<span class="ruby-ivar">@cmd</span>[<span class="ruby-value">:scanurl</span>]))
+82:                                 <span class="ruby-ivar">@res</span>.<span class="ruby-identifier">write2display</span>
+83:                         <span class="ruby-keyword kw">else</span>
+84:                                 <span class="ruby-identifier">puts</span> <span class="ruby-identifier">parseOpt</span>(<span class="ruby-value str">'--help'</span>)
+85:                                 <span class="ruby-identifier">exit</span>
+86:                         <span class="ruby-keyword kw">end</span>
+87:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

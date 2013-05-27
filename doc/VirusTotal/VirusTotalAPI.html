@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: VirusTotal::VirusTotalAPI</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/virustotal/api_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/virustotal/api.rb">lib/virustotal/api.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-getDomainReport">#getDomainReport</a></li>
+					
+					<li><a href="#method-i-getFileReport">#getFileReport</a></li>
+					
+					<li><a href="#method-i-getFileReports">#getFileReports</a></li>
+					
+					<li><a href="#method-i-getIPReport">#getIPReport</a></li>
+					
+					<li><a href="#method-i-getMd5Sum">#getMd5Sum</a></li>
+					
+					<li><a href="#method-i-getUrlReport">#getUrlReport</a></li>
+					
+					<li><a href="#method-i-scanFile">#scanFile</a></li>
+					
+					<li><a href="#method-i-scanUrl">#scanUrl</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../VirusTotal.html">VirusTotal</a></li>
+				
+					<li><a href="../VirusTotal/Report.html">VirusTotal::Report</a></li>
+				
+					<li><a href="../VirusTotal/ScanResponse.html">VirusTotal::ScanResponse</a></li>
+				
+					<li><a href="../VirusTotal/VT_CLI.html">VirusTotal::VT_CLI</a></li>
+				
+					<li><a href="../VirusTotal/VirusTotalAPI.html">VirusTotal::VirusTotalAPI</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">VirusTotal::VirusTotalAPI</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(verbose = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initialize
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 10</span>
+10:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">verbose</span> = <span class="ruby-keyword kw">false</span>)
+11:                         <span class="ruby-ivar">@config</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">home</span>, <span class="ruby-value str">&quot;.virustotal.conf&quot;</span>)
+12:                         
+13:                         <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">not</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-ivar">@config</span>)
+14:                                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[!!] Config file #{@config} is not found!&quot;</span>
+15:                                 <span class="ruby-identifier">exit</span>
+16:                         <span class="ruby-keyword kw">end</span>
+17:                         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@config</span>, <span class="ruby-value str">&quot;r&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+18:                                 <span class="ruby-ivar">@key</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+19:                         <span class="ruby-keyword kw">end</span>
+20:                         
+21:                         <span class="ruby-comment cmt"># check API key length here</span>
+22:                         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@key</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">64</span>
+23:                                 <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;[!!] API KEY ERROR!!&quot;</span>
+24:                                 <span class="ruby-identifier">exit</span>
+25:                         <span class="ruby-keyword kw">end</span>
+26:                         <span class="ruby-ivar">@verbose</span> = <span class="ruby-identifier">verbose</span>
+27:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="get-omain-eport-method" class="method-detail ">
+				<a name="method-i-getDomainReport"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">getDomainReport</span><span
+						class="method-args">(domain)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-omain-eport-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 103</span>
+103:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getDomainReport</span>(<span class="ruby-identifier">domain</span>)
+104:                         <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span>(
+105:                                 <span class="ruby-value str">'https://www.virustotal.com/vtapi/v2/domain/report'</span>,
+106:                                 <span class="ruby-value str">'domain'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">domain</span>,
+107:                                 <span class="ruby-value str">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
+108:                         <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
+109:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-ile-eport-method" class="method-detail ">
+				<a name="method-i-getFileReport"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">getFileReport</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieve file-report  based on hashes (IE md5sum) from virustotal.com 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-ile-eport-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 29</span>
+29:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getFileReport</span>(<span class="ruby-identifier">hash</span>)
+30:                         <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>(
+31:                                 <span class="ruby-value str">'https://www.virustotal.com/vtapi/v2/file/report'</span>,
+32:                                 <span class="ruby-value str">'resource'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">hash</span>,
+33:                                 <span class="ruby-value str">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
+34:                         <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
+35:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-ile-eports-method" class="method-detail ">
+				<a name="method-i-getFileReports"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">getFileReports</span><span
+						class="method-args">(array)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieve multiple file-reports from array (of hashes)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-ile-eports-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 37</span>
+37:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getFileReports</span>(<span class="ruby-identifier">array</span>)
+38:                         <span class="ruby-identifier">hashes</span> = <span class="ruby-identifier">array</span>
+39:                         <span class="ruby-comment cmt"># Get multiple file reports</span>
+40:                         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+41:                         <span class="ruby-identifier">hashes</span> = <span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">uniq</span>
+42:                         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">size</span>
+43:                                 <span class="ruby-value">4</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span>
+44:                                         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hashes</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+45:                                                 <span class="ruby-keyword kw">break</span>
+46:                                         <span class="ruby-keyword kw">else</span>
+47:                                                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Fetching file report for #{hashes[i].slice(0)} (#{i+1}/#{hashes.size})&quot;</span>
+48:                                                 <span class="ruby-identifier">hashes</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">VirusTotal</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">get_file_report</span>(<span class="ruby-identifier">hashes</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>))
+49:                                         <span class="ruby-keyword kw">end</span>
+50:                                 <span class="ruby-keyword kw">end</span>
+51:                                 <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+52:                         <span class="ruby-keyword kw">end</span>
+53:                         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span> (<span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">4</span>)
+54:                                 <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;[*] Skipping 4.times loop, i am all done..&quot;</span>
+55:                                 <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hashes</span>
+56:                         <span class="ruby-keyword kw">else</span>
+57:                                 <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;[*] Sleeping 65 seconds.&quot;</span>
+58:                                 <span class="ruby-identifier">sleep</span>(<span class="ruby-value">65</span>)
+59:                         <span class="ruby-keyword kw">end</span>
+60:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-eport-method" class="method-detail ">
+				<a name="method-i-getIPReport"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">getIPReport</span><span
+						class="method-args">(ip)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Private API  Not tested
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-eport-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 96</span>
+ 96:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getIPReport</span>(<span class="ruby-identifier">ip</span>)
+ 97:                         <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span>(
+ 98:                                 <span class="ruby-value str">'https://www.virustotal.com/vtapi/v2/ip-address/report'</span>,
+ 99:                                 <span class="ruby-value str">'ip'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ip</span>,
+100:                                 <span class="ruby-value str">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
+101:                         <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
+102:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-d-um-method" class="method-detail ">
+				<a name="method-i-getMd5Sum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">getMd5Sum</span><span
+						class="method-args">(file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-d-um-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 89</span>
+89:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getMd5Sum</span>(<span class="ruby-identifier">file</span>)
+90:                         <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">file</span>))
+91:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-rl-eport-method" class="method-detail ">
+				<a name="method-i-getUrlReport"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">getUrlReport</span><span
+						class="method-args">(url)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieve Url <a href="Report.html">Report</a> from Virustotal.com
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-rl-eport-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 62</span>
+62:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getUrlReport</span>(<span class="ruby-identifier">url</span>)
+63:                         <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>(
+64:                                 <span class="ruby-value str">'https://www.virustotal.com/vtapi/v2/url/report'</span>,
+65:                                 <span class="ruby-value str">'resource'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">url</span>,
+66:                                 <span class="ruby-value str">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
+67:                         <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
+68:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scan-ile-method" class="method-detail ">
+				<a name="method-i-scanFile"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scanFile</span><span
+						class="method-args">(filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Upload file to virustotal.com
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="scan-ile-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 70</span>
+70:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scanFile</span>(<span class="ruby-identifier">filename</span>)
+71:                         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
+72:                                 <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>( 
+73:                                         <span class="ruby-value str">'https://www.virustotal.com/vtapi/v2/file/scan'</span>,
+74:                                         <span class="ruby-value str">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span>, 
+75:                                         <span class="ruby-value str">'file'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-value str">'rb'</span>) )
+76:                                 <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
+77:                         <span class="ruby-keyword kw">else</span>
+78:                                 <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;[!!] Could not open file #{filename}&quot;</span>
+79:                         <span class="ruby-keyword kw">end</span>
+80:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scan-rl-method" class="method-detail ">
+				<a name="method-i-scanUrl"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scanUrl</span><span
+						class="method-args">(url)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Let virustotal scan url to check for malicious content
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="scan-rl-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/virustotal/api.rb, line 82</span>
+82:                 <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scanUrl</span>(<span class="ruby-identifier">url</span>)
+83:                         <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>(
+84:                                 <span class="ruby-value str">'https://www.virustotal.com/vtapi/v2/url/scan'</span>,
+85:                                 <span class="ruby-value str">'url'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">url</span>,
+86:                                 <span class="ruby-value str">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
+87:                         <span class="ruby-identifier">result</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
+88:                 <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

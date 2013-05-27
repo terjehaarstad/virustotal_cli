@@ -1,556 +1,182 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-  <title>Class: VirusTotal</title>
+	<title>Module: VirusTotal</title>
 
-  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
-  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
 
 </head>
-<body id="top" class="class">
+<body class="module">
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
         <h3 class="section-header">
           <a href="./index.html">Home</a>
           <a href="./index.html#classes">Classes</a>
           <a href="./index.html#methods">Methods</a>
         </h3>
-      </div>
-    </div>
-
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="./lib/virustotal_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/virustotal.rb">lib/virustotal.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
-
-      
-    </div>
-
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
-
-      
-
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-          <li><a href="#method-i-displayReport">#displayReport</a></li>
-          
-          <li><a href="#method-i-getFileReport">#getFileReport</a></li>
-          
-          <li><a href="#method-i-getFileReports">#getFileReports</a></li>
-          
-          <li><a href="#method-i-getMd5Sum">#getMd5Sum</a></li>
-          
-          <li><a href="#method-i-getUrlReport">#getUrlReport</a></li>
-          
-          <li><a href="#method-i-scanFile">#scanFile</a></li>
-          
-          <li><a href="#method-i-scanUrl">#scanUrl</a></li>
-          
-          <li><a href="#method-i-writeReport">#writeReport</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="./images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="./VT_cli.html">VT_cli</a></li>
-        
-          <li><a href="./VirusTotal.html">VirusTotal</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
-  </div>
-
-  <div id="documentation">
-    <h1 class="class">VirusTotal</h1>
-
-    <div id="description" class="description">
-      
-<p><a href="VirusTotal.html">VirusTotal</a> API v2 library</p>
-
-    </div><!-- description -->
-
-    
-    
-    
-    <div id="5Buntitled-5D" class="documentation-section">
-      
-
-      
-
-      
-
-      
-
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(key, verbose = false)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Initialize</p>
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 9</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">verbose</span> = <span class="ruby-keyword">false</span>)
-        <span class="ruby-comment"># check API key length here</span>
-        <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">64</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[!!] API KEY ERROR!!&quot;</span>
-                <span class="ruby-identifier">exit</span>
-        <span class="ruby-keyword">end</span>
-        <span class="ruby-ivar">@key</span> = <span class="ruby-identifier">key</span>
-        <span class="ruby-ivar">@verbose</span> = <span class="ruby-identifier">verbose</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- new-method -->
-
-      
-      </div><!-- public-class-method-details -->
-    
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
-
-      
-        <div id="displayReport-method" class="method-detail ">
-          <a name="method-i-displayReport"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">displayReport</span><span
-              class="method-args">(report)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Display Report retrieved from VirusTotal.com</p>
-            
-
-            
-            <div class="method-source-code" id="displayReport-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 80</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">displayReport</span>(<span class="ruby-identifier">report</span>)
-        <span class="ruby-comment"># From API documentation:</span>
-        <span class="ruby-comment"># If the file was not present in our file store this code will be -1. </span>
-        <span class="ruby-comment"># In the event of some unexpected error the code will be fixed to 0.</span>
-        
-        <span class="ruby-comment"># Display Reports</span>
-        <span class="ruby-keyword">if</span> <span class="ruby-identifier">report</span>[<span class="ruby-string">'response_code'</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[+]-------------------------------------------------------------------------&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Resource: #{report['resource']}&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Link: #{report['permalink']}&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] MD5: #{report['md5']}&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] SHA256: #{report['sha256']}&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Detection Ratio: #{report['positives']}/#{report['total']}&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Scan date: #{report['scan_date']}&quot;</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[+]-------------------------------------------------------------------------&quot;</span>  
-                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@verbose</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[*] Report:&quot;</span>
-                        <span class="ruby-identifier">report</span>[<span class="ruby-string">'scans'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
-                                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot; [R] #{key}: #{value['result']}&quot;</span>
-                        <span class="ruby-keyword">end</span>
-                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[+]-------------------------------------------------------------------------&quot;</span> 
-                <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">else</span> 
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[!!] #{report['verbose_msg']}&quot;</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- displayReport-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- displayReport-method -->
-
-      
-        <div id="getFileReport-method" class="method-detail ">
-          <a name="method-i-getFileReport"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getFileReport</span><span
-              class="method-args">(hash)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Retrieve file-report  based on hashes (IE md5sum) from virustotal.com</p>
-            
-
-            
-            <div class="method-source-code" id="getFileReport-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 19</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFileReport</span>(<span class="ruby-identifier">hash</span>)
-        <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>(
-                <span class="ruby-string">'https://www.virustotal.com/vtapi/v2/file/report'</span>,
-                <span class="ruby-string">'resource'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">hash</span>,
-                <span class="ruby-string">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
-        <span class="ruby-identifier">report</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- getFileReport-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- getFileReport-method -->
-
-      
-        <div id="getFileReports-method" class="method-detail ">
-          <a name="method-i-getFileReports"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getFileReports</span><span
-              class="method-args">(array)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Retrieve multiple file-reports from array (of hashes)</p>
-            
-
-            
-            <div class="method-source-code" id="getFileReports-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 27</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFileReports</span>(<span class="ruby-identifier">array</span>)
-        <span class="ruby-identifier">hashes</span> = <span class="ruby-identifier">array</span>
-        <span class="ruby-comment"># Get multiple file reports</span>
-        <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
-        <span class="ruby-identifier">hashes</span> = <span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">uniq</span>
-        <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">size</span>
-                <span class="ruby-value">4</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
-                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">hashes</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
-                                <span class="ruby-keyword">break</span>
-                        <span class="ruby-keyword">else</span>
-                                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Fetching file report for #{hashes[i].slice(0)} (#{i+1}/#{hashes.size})&quot;</span>
-                                <span class="ruby-identifier">hashes</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">MyTools</span><span class="ruby-operator">::</span><span class="ruby-constant">VirusTotal</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">get_file_report</span>(<span class="ruby-identifier">hashes</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>))
-                        <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">end</span>
-                <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
-        <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span> (<span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">4</span>)
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[*] Skipping 4.times loop, i am all done..&quot;</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">hashes</span>
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[*] Sleeping 65 seconds.&quot;</span>
-                <span class="ruby-identifier">sleep</span>(<span class="ruby-value">65</span>)
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- getFileReports-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- getFileReports-method -->
-
-      
-        <div id="getMd5Sum-method" class="method-detail ">
-          <a name="method-i-getMd5Sum"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getMd5Sum</span><span
-              class="method-args">(file)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getMd5Sum-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 128</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">getMd5Sum</span>(<span class="ruby-identifier">file</span>)
-        <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">file</span>))
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- getMd5Sum-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- getMd5Sum-method -->
-
-      
-        <div id="getUrlReport-method" class="method-detail ">
-          <a name="method-i-getUrlReport"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getUrlReport</span><span
-              class="method-args">(url)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Retrieve Url Report from Virustotal.com</p>
-            
-
-            
-            <div class="method-source-code" id="getUrlReport-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 52</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUrlReport</span>(<span class="ruby-identifier">url</span>)
-        <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>(
-                <span class="ruby-string">'http://www.virustotal.com/vtapi/v2/url/report'</span>,
-                <span class="ruby-string">'resource'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">url</span>,
-                <span class="ruby-string">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
-        <span class="ruby-identifier">report</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- getUrlReport-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- getUrlReport-method -->
-
-      
-        <div id="scanFile-method" class="method-detail ">
-          <a name="method-i-scanFile"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">scanFile</span><span
-              class="method-args">(filename)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Upload file to virustotal.com</p>
-            
-
-            
-            <div class="method-source-code" id="scanFile-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 60</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">scanFile</span>(<span class="ruby-identifier">filename</span>)
-        <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">filename</span>)
-                <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>( 
-                        <span class="ruby-string">'https://www.virustotal.com/vtapi/v2/file/scan'</span>,
-                        <span class="ruby-string">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span>, 
-                        <span class="ruby-string">'file'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">'rb'</span>) )
-                <span class="ruby-identifier">result</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;[!!] Could not open file #{filename}&quot;</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- scanFile-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- scanFile-method -->
-
-      
-        <div id="scanUrl-method" class="method-detail ">
-          <a name="method-i-scanUrl"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">scanUrl</span><span
-              class="method-args">(url)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Let virustotal scan url to check for malicious content</p>
-            
-
-            
-            <div class="method-source-code" id="scanUrl-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 72</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">scanUrl</span>(<span class="ruby-identifier">url</span>)
-        <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>(
-                <span class="ruby-string">'https://www.virustotal.com/vtapi/v2/url/scan'</span>,
-                <span class="ruby-string">'url'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">url</span>,
-                <span class="ruby-string">'apikey'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@key</span> )
-        <span class="ruby-identifier">result</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- scanUrl-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- scanUrl-method -->
-
-      
-        <div id="writeReport-method" class="method-detail ">
-          <a name="method-i-writeReport"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">writeReport</span><span
-              class="method-args">(report)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Write <a href="VirusTotal.html">VirusTotal</a> report to md5sum_filename.…</p>
-            
-
-            
-            <div class="method-source-code" id="writeReport-source">
-<pre>
-<span class="ruby-comment"># File lib/virustotal.rb, line 107</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">writeReport</span>(<span class="ruby-identifier">report</span>)
-        <span class="ruby-comment"># Write file to filename // Check this, write to resource, not md5sum.</span>
-        <span class="ruby-identifier">filename</span> = <span class="ruby-node">&quot;#{report['md5']}.vt&quot;</span>
-        <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">filename</span>)
-                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[!!] #{filename} exists, skipping --write option&quot;</span>
-        <span class="ruby-keyword">elsif</span>
-                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">'w'</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;-------------------------------------------------------------------------&quot;</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Resource: #{report['resource']}&quot;</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Detection Ratio: #{report['positives']}/#{report['total']}&quot;</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] Link: #{report['permalink']}&quot;</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[*] MD5: #{report['md5']}&quot;</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;-------------------------------------------------------------------------&quot;</span>
-                        <span class="ruby-comment"># Print Virustotal.com results</span>
-                        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;[*] Report:&quot;</span>
-                        <span class="ruby-identifier">report</span>[<span class="ruby-string">'scans'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
-                                <span class="ruby-identifier">file</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[R] #{key}: #{value['result']}&quot;</span>
-                        <span class="ruby-keyword">end</span>
-                <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- writeReport-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- writeReport-method -->
-
-      
-      </div><!-- public-instance-method-details -->
-    
-    </div><!-- 5Buntitled-5D -->
-  
-
-  </div><!-- documentation -->
-
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./bin/vt_cli_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="bin/vt_cli.rb">bin/vt_cli.rb</a></li>
+					
+						<li><a href="./lib/virustotal_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/virustotal.rb">lib/virustotal.rb</a></li>
+					
+						<li><a href="./lib/virustotal/api_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/virustotal/api.rb">lib/virustotal/api.rb</a></li>
+					
+						<li><a href="./lib/virustotal/response_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/virustotal/response.rb">lib/virustotal/response.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="VirusTotal/Report.html">VirusTotal::Report</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="VirusTotal/ScanResponse.html">VirusTotal::ScanResponse</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="VirusTotal/VT_CLI.html">VirusTotal::VT_CLI</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="VirusTotal/VirusTotalAPI.html">VirusTotal::VirusTotalAPI</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./VirusTotal.html">VirusTotal</a></li>
+				
+					<li><a href="./VirusTotal/Report.html">VirusTotal::Report</a></li>
+				
+					<li><a href="./VirusTotal/ScanResponse.html">VirusTotal::ScanResponse</a></li>
+				
+					<li><a href="./VirusTotal/VT_CLI.html">VirusTotal::VT_CLI</a></li>
+				
+					<li><a href="./VirusTotal/VirusTotalAPI.html">VirusTotal::VirusTotalAPI</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">VirusTotal</h1>
+
+		<div id="description">
+			<p>
+Virustotal reports from CLI
+</p>
+<hr style="height: 1px"></hr><p>
+<a href="VirusTotal.html">VirusTotal</a> API v2 library
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="APP_NAME">APP_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
 
 </body>
 </html>

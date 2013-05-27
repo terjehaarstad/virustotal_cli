@@ -1,3 +1,5 @@
-Wed, 03 Oct 2012 20:44:11 +0200
-./bin/vt_cli.rb	Wed, 03 Oct 2012 20:26:04 +0200
-./lib/virustotal.rb	Wed, 03 Oct 2012 17:55:24 +0200
+Mon, 27 May 2013 14:36:14 +0200
+./bin/vt_cli.rb	Mon, 27 May 2013 13:36:58 +0200
+./lib/virustotal.rb	Mon, 27 May 2013 14:20:41 +0200
+./lib/virustotal/api.rb	Mon, 27 May 2013 14:12:06 +0200
+./lib/virustotal/response.rb	Mon, 27 May 2013 14:26:05 +0200
