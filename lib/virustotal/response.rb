@@ -68,7 +68,7 @@ module VirusTotal
 				if $verbose	
 					puts "[*] Report:"
 					@scans.each do |key, value|
-						puts " [R] #{key}: #{value['result']}"
+						puts " [R] #{key}: #{value['result']}" if value['result'] # Only show actual results.....
 					end
 				end
 				
