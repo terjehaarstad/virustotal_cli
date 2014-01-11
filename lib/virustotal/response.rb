@@ -52,6 +52,7 @@ module VirusTotal
 				return true 
 			else
 				puts "#{@verbose_msg}"
+				return false
 			end
 		end
 		def write2display
