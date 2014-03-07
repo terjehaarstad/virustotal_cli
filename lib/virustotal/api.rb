@@ -87,7 +87,13 @@ module VirusTotal
 			result = JSON.parse(response)
 		end
 		def getMd5Sum(file)
-			Digest::MD5.hexdigest(File.read(file))
+			begin
+				Digest::MD5.hexdigest(File.read(file))
+			rescue => e
+				puts e
+				exit
+			end
+			
 		end
 		
 		#
