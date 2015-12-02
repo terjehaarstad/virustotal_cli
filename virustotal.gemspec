@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 	s.date = '2013-05-27'
 	s.summary = 'Virustotal requests from CLI'
 	s.description = "Handles virustotal API requests from linux terminal."
-	s.required_ruby_version = ">= 1.9.2"
+	s.required_ruby_version = ">= 2.1"
 	s.author = 'Terje Haarstad'
 	s.has_rdoc = true
 	
