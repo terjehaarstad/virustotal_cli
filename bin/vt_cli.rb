@@ -38,19 +38,19 @@ module VirusTotal
 				
 				#Commands
 				opts.separator "Commands:"
-				opts.on('--scanfile [FILE]', 'Uploads a file to VT') do |file|
+				opts.on('-F', '--scanfile [FILE]', 'Upload and scan [FILE]') do |file|
 					@cmd[:scanfile] = file
 				end
-				opts.on('--scanurl [URL]', "Check url with VT") do |url|
+				opts.on('-U', '--scanurl [URL]', "Upload and scan [URL].") do |url|
 					@cmd[:scanurl] = url
 				end
-				opts.on('--hash [HASH]', "Get Virustotal report from a hash(MD5/SHA)") do |hash|
+				opts.on('-H', '--hash [HASH]', "Get report on [HASH] (MD5/SHA)") do |hash|
 					@cmd[:hash] = hash
 				end
-				opts.on('--file [FILE]', "Get Virustotal report from a file") do |file|
+				opts.on('-f', '--file [FILE]', "Get report on [FILE]") do |file|
 					@cmd[:file] = file
 				end
-				opts.on('--url [URL]', "Get Virustotal report from URL") do |url|
+				opts.on('-u', '--url [URL]', "Get report on [URL]") do |url|
 					@cmd[:url] = url
 				end
 				opts.parse!
